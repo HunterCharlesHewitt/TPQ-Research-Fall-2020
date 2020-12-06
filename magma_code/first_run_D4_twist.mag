@@ -27,7 +27,7 @@ B:=[u1^4 - 1,
 [commutator_function(z,x,1): x in X];
 
 I:=ideal<R|B>;
-R1i:= 1 - (a*u1 + b*u1^2 + c*u1^3 + d*v1 + e*v1*u1 + f*v1*u1^2 + g*v1*u1^3);
+R1inverse:= 1 - (a*u1 + b*u1^2 + c*u1^3 + d*v1 + e*v1*u1 + f*v1*u1^2 + g*v1*u1^3);
 R1:= 1 + a*u1 + b*u1^2 + c*u1^3 + d*v1 + e*v1*u1 + f*v1*u1^2 + g*v1*u1^3;
 R2:= 1 + a*u2 + b*u2^2 + c*u2^3 + d*v2 + e*v2*u2 + f*v2*u2^2 + g*v2*u2^3;
 
