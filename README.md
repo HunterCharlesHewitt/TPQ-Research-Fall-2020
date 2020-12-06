@@ -13,6 +13,7 @@ As outlined in Dr. Rowell's paper, we will be working with MAGMA in order to fin
 2. Create a free algebra from this field with n variables. These variables will be our group generators as well as our coefficients, and any other necessary variables. In my code, z is used to represent the inverse of the determinant of the r1 matrix described in the maple section. The free algebra is essentially the non-commutative version of a polynomial ring. This is useful for defining variables in the dihedral group since they aren't commutative. 
 3. Define a commutator function. When variables are passed to this function, and then included in our ideal generation later, we essentially are telling MAGMA "make these two variables commute with each other". The "z" function argument if equal to +1 will make the variables commute and if equal to -1 will make them anti-commute.
 4. X and B are used as helpful sequences where we can define the relations between our variables and where we can call the commutator function.
+
 The following are the dihedral group relations
 - u1^4 - 1,
 - u2^4 - 1, 
@@ -20,6 +21,7 @@ The following are the dihedral group relations
 - v2^2 - 1, 
 - (u1 * v1 * u1 * v1) - 1
 - (u2 * v2 * u2 * v2) - 1 
+
 The following relations are the ones from the twisting. Specific choices of commuting/anticommuting come from chosen bihomomorphism: 
 - commutator_function(u1,u2,-1)
 - commutator_function(v1,v2,-1)
