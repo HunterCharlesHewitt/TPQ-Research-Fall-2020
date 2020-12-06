@@ -1,14 +1,14 @@
 #The purpose of this program is to strip coefficients off of polynomials received from MAGMA output
 
 #uncomment for S3
-coefficients = ["a","b","c","d","e"] #this list is the list of coefficients you are using
-variables = ["u1","v1","u2","v2","v1^2","v2^2","u1^2","u2^2"] #this is the list of variables output by MAGMA, be sure to include squares if present
-filename = "S3_YBO_1_Output.txt"
+#coefficients = ["a","b","c","d","e"] #this list is the list of coefficients you are using
+#variables = ["u1","v1","u2","v2","v1^2","v2^2","u1^2","u2^2"] #this is the list of variables output by MAGMA, be sure to include squares if present
+#filename = "S3_YBO_1_Output.txt"
 
-#uncomment for D4
-# coefficients = ["a","b","c","d","e","f","g"]
-# variables = ["r1","r2","m1","m2","r1^2","r2^2"]
-#filename = "D4_YBO_NoTwist_Output.txt"
+#uncomment for D8
+coefficients = ["a","b","c","d","e","f","g"]
+variables = ["u1","v1","u2","v2","u1^2","u2^2","v1^2","v2^2","u1^2","u2^2"]
+filename = "D4_YBO_NoTwist_Output.txt"
 
 class Term:
   def __init__(self, isPositive, term):
