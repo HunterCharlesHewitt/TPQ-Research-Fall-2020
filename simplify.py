@@ -1,7 +1,8 @@
+#The purpose of this program is to strip coefficients off of polynomials received from MAGMA output
 
 
-coefficients = ["a","b","c","d","e"]
-variables = ["u1","v1","u2","v2","v1^2","v2^2","u1^2","u2^2"]
+coefficients = ["a","b","c","d","e"] #this list is the list of coefficients you are using
+variables = ["u1","v1","u2","v2","v1^2","v2^2","u1^2","u2^2"] #this is the list of variables output by MAGMA, be sure to include squares if present
 #filename = "S3_YBO_1_Output.txt"
 
 #uncomment for D4
