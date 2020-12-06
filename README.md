@@ -53,16 +53,16 @@ variables = \["u1","v1","u2","v2","u1^2","u2^2","v1^2","v2^2","u1^2","u2^2"\] si
 The solutions I got after the second run through of MAGMA code including the relations from the Groebner basis output (at least some of them) were the following 
 
 Non Identity Solutions: 
--[a = 0, b =-1, c = 0, d = 0, e = 0, f = 0, g = 0, z = 1/4]
--[a = -1, b = -1, c = 1, d = 0, e = 0, f = 0, g = 0, z = 1/8]
--[a = 1, b = -1, c = -1, d = 0, e = 0, f = 0, g = 0, z = 1/8]
--[a = 0, b = -1/3, c = 0, d = 0, e = 1/3, f = 0, g = 1/3, z = 9/16]
--[a = 0, b = -1/3, c = 0, d = 0, e = -1/3, f = 0, g = -1/3, z = 9/16]
--[a = 0, b = 0, c = 0, d = RootOf(_Z^2 + 1), e = 0, f = 0, g = 0, z = 1/2]
--[a = 0, b = 0, c = 0, d = 0, e = 0, f = RootOf(_Z^2 + 1), g = 0, z = 1/2]
--[a = 0, b = -1, c = 0, d = -RootOf(_Z^2 + 1), e = 0, f = RootOf(_X^2 + 1), g = 0, z = 1/8]
--[a = -1 + RootOf(2*_Z^2 - 2*_Z + 1), b = 0, c = RootOf(2*_Z^2 - 2*_Z + 1), d = 0, e = 0, f = 0, g = 0, z = 1/2]
--[a = 1 + RootOf(2*_Z^2 + 2*_Z + 1), b = 0, c = RootOf(2*_Z^2 + 2*_Z + 1), d = 0, e = 0, f = 0, g = 0, z = 1/2]
+- [a = 0, b =-1, c = 0, d = 0, e = 0, f = 0, g = 0, z = 1/4]
+- [a = -1, b = -1, c = 1, d = 0, e = 0, f = 0, g = 0, z = 1/8]
+- [a = 1, b = -1, c = -1, d = 0, e = 0, f = 0, g = 0, z = 1/8]
+- [a = 0, b = -1/3, c = 0, d = 0, e = 1/3, f = 0, g = 1/3, z = 9/16]
+- [a = 0, b = -1/3, c = 0, d = 0, e = -1/3, f = 0, g = -1/3, z = 9/16]
+- [a = 0, b = 0, c = 0, d = RootOf(_Z^2 + 1), e = 0, f = 0, g = 0, z = 1/2]
+- [a = 0, b = 0, c = 0, d = 0, e = 0, f = RootOf(_Z^2 + 1), g = 0, z = 1/2]
+- [a = 0, b = -1, c = 0, d = -RootOf(_Z^2 + 1), e = 0, f = RootOf(_X^2 + 1), g = 0, z = 1/8]
+- [a = -1 + RootOf(2*_Z^2 - 2*_Z + 1), b = 0, c = RootOf(2*_Z^2 - 2*_Z + 1), d = 0, e = 0, f = 0, g = 0, z = 1/2]
+- [a = 1 + RootOf(2*_Z^2 + 2*_Z + 1), b = 0, c = RootOf(2*_Z^2 + 2*_Z + 1), d = 0, e = 0, f = 0, g = 0, z = 1/2]
 
 Identity Solutions:
 [a - 0, b - 0, c - 0, d - 0, e - 0, f - 0, g - 0, z - 1]
