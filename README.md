@@ -48,4 +48,5 @@ variables = \["u1","v1","u2","v2","u1^2","u2^2","v1^2","v2^2","u1^2","u2^2"\] si
 1. rels are just the copy and pasted sequence of polynomials from the python code output
 2. `R := Matrix(2, 2, [[1 + d - b - f, c - a + e - g], [a - c + e - g, 1 + f - d - b]])` is the matrix representation of  `R:= 1 + a\*u + b\*u^2 + c\*u^3 + d\*v + e\*v\*u + f\*v\*u^2 + g\*v\*u^3` with the original generators
 3. We next do `det := {Determinant(R)*z - 1}` to enforce the determinant of the solution to be non-zero (which enforces invertibility) 
+4. Next use `with(Groebner); bas := factor(Basis(un, tdeg(z, a, b, c, d, e, f, g)));` and the output will tell us our new relations
 # Results and Leads
