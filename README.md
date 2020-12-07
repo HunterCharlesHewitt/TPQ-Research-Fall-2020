@@ -75,7 +75,7 @@ There was some work done with the following description of R1 and R2 in MAGMA
 
 `R1 = (1+a*u1)*(b*v1)` 
 
-and similarly for R1. You can view [the MAGMA Code here](). However, through the first run of magma, then maple it is clear that either a or b must be zero for the YBE to be satisfied, which only recovers results from Z2 rather than finding anything interesting. 
+and similarly for R1. You can view [the MAGMA Code here](https://github.com/HunterCharlesHewitt/TPQ-Research-Fall-2020/blob/main/magma_code/factorization.mag). However, through the first run of magma, then maple it is clear that either a or b must be zero for the YBE to be satisfied, which only recovers results from Z2 rather than finding anything interesting. 
 
 ### Yet to try No Z
 Since the z variable is used to enforce invertibility of the solution, and isn't really meaningful outside of that, I began looking into what would happen if I removed z from the relations after running the Groebner basis in Maple. The original result appears to be too much computing power for the free version of MAGMA, but maybe with the full version they could be useful. The code for these is [here](https://github.com/HunterCharlesHewitt/TPQ-Research-Fall-2020/tree/main/magma_code/yet_to_run)  
