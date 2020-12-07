@@ -68,7 +68,7 @@ Non Identity Solutions:
 Identity Solutions:
 [a - 0, b - 0, c - 0, d - 0, e - 0, f - 0, g - 0, z - 1]
 
-Most of these solutions either end up with both R1 and R2 being the identity, 0, or only recovering a single variable. The most interesting relations I've found so far is taking z = 1/2 and making a and c both nonzero. The code for this is located [here](https://github.com/HunterCharlesHewitt/TPQ-Research-Fall-2020/blob/main/magma_code/second_run_D4_az_nonzero_z_onehalf.mag)
+Most of these solutions either end up with both R1 and R2 being the identity after some fiddling, or only recovering a single variable. The most interesting relations I've found so far is taking z = 1/2 and making a and c both nonzero. The code for this is located [here](https://github.com/HunterCharlesHewitt/TPQ-Research-Fall-2020/blob/main/magma_code/second_run_D4_az_nonzero_z_onehalf.mag)
 
 ### Factorization
 There was some work done with the following description of R1 and R2 in MAGMA
