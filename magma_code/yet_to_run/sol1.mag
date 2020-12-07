@@ -1,0 +1,52 @@
+commutator_function:=function(x,y,z)
+return x*y-z*y*x;
+end function;
+
+F<w>:=CyclotomicField(4);
+R<u1,u2,v1,v2,a,b,c,d,e,f,g,z>:=FreeAlgebra(F,12); //u1 and u2 are rotation, v1 and v2 are mirror
+
+X:=[u1,v1,u2,v2,a,b,c,d,e,f,g,z];
+
+/*Relations From D4*/
+B:=[u1^4 - 1,
+    u2^4 - 1, 
+    v1^2 - 1, 
+    v2^2 - 1, 
+    (u1 * v1 * u1 * v1) - 1,
+    (u2 * v2 * u2 * v2) - 1] cat
+    [commutator_function(u1,u2,-1),commutator_function(v1,v2,-1)] cat
+    [commutator_function(u1,v2,1),commutator_function(u2,v1,1)] cat
+/*Commutator Variables*/ 
+[commutator_function(a,x,1): x in X] cat
+[commutator_function(b,x,1): x in X] cat
+[commutator_function(c,x,1): x in X] cat
+[commutator_function(d,x,1): x in X] cat
+[commutator_function(e,x,1): x in X] cat
+[commutator_function(f,x,1): x in X] cat
+[commutator_function(g,x,1): x in X] cat
+[commutator_function(z,x,1): x in X] cat
+
+//chosen solution
+[2*z^2 + 2*z + 1, a-(z-1),b,c^2+2*c+1,e - (-(6*d*f + 1)*g)];
+I:=ideal<R|B>;
+R1i:= 1 - (a*u1 + b*u1^2 + c*u1^3 + d*v1 + e*v1*u1 + f*v1*u1^2 + g*v1*u1^3);
+R1:= 1 + a*u1 + b*u1^2 + c*u1^3 + d*v1 + e*v1*u1 + f*v1*u1^2 + g*v1*u1^3;
+R2:= 1 + a*u2 + b*u2^2 + c*u2^3 + d*v2 + e*v2*u2 + f*v2*u2^2 + g*v2*u2^3;
+
+print("YBE:");
+NormalForm(R1*R2*R1-R2*R1*R2,I);
+print("");
+print("R1:");
+NormalForm(R1,I);
+print("");
+print("R1^2:");
+NormalForm(R1^2,I);
+print("");
+print("R1^3:");
+NormalForm(R1^3,I);
+print("");
+print("R1^4:");
+NormalForm(R1^4,I);
+print("");
+print("R1*R1i:");
+NormalForm(R1*R1i,I);

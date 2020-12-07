@@ -1,0 +1,60 @@
+commutator_function:=function(x,y,z)
+return x*y-z*y*x;
+end function;
+
+F<w>:=CyclotomicField(4);
+R<u1,u2,v1,v2,a,b,c,d,e,f,g,z>:=FreeAlgebra(F,12); //u1 and u2 are rotation, v1 and v2 are mirror
+
+X:=[u1,v1,u2,v2,a,b,c,d,e,f,g,z];
+
+/*Relations From D4*/
+B:=[u1^4 - 1,
+    u2^4 - 1, 
+    v1^2 - 1, 
+    v2^2 - 1, 
+    (u1 * v1 * u1 * v1) - 1,
+    (u2 * v2 * u2 * v2) - 1] cat
+    [commutator_function(u1,u2,-1),commutator_function(v1,v2,-1)] cat
+    [commutator_function(u1,v2,1),commutator_function(u2,v1,1)] cat
+/*Commutator Variables*/ 
+[commutator_function(a,x,1): x in X] cat
+[commutator_function(b,x,1): x in X] cat
+[commutator_function(c,x,1): x in X] cat
+[commutator_function(d,x,1): x in X] cat
+[commutator_function(e,x,1): x in X] cat
+[commutator_function(f,x,1): x in X] cat
+[commutator_function(g,x,1): x in X] cat
+[commutator_function(z,x,1): x in X] cat
+
+//chosen solution
+[z-(1/4)] cat 
+
+//determinant
+[(a^2 - 2*a*c + b^2 + c^2 - d^2 + 2*d*f - e^2 + 2*e*g - f^2 - g^2 - 2*b + 1)*(z) - 1] cat
+
+//relations
+[g*(e - g), -12*b*g + 32*g*z - 3*e - 19*g, f*(e + g), c*f, a*f, -f*(3*b - 8*z + 4), (e - g)*(e + g), d*(e + g), c*(e + g), (e + g)*(3*b + 1), a*(e + g), 12*b*g + 32*e*z - 15*e + g, c*d, b*(d + f), a*d, 3*b*f + 8*d*z - 4*d, -c*(3*b - 8*z + 4), b^2 + 2*g^2 + b, b*(a + c), 8*a*c + 56*b*z + 4*d^2 + 4*f^2 + 39*g^2 - 8*b - 8*z + 8, 7*a^2 + 16*a*c + 7*c^2 + 8*d^2 + 14*d*f + 8*f^2 - 27*g^2 + 12*b - 16*z + 16, 8*a*z + 3*b*c - 4*a, 288*a*c + 144*d^2 + 144*f^2 + 963*g^2 + 1792*z^2 + 552*b - 2976*z + 1184, 18*g^3 - e - g, f*g^2, d*g^2, c*g^2, g^2*(3*b + 1), a*g^2, 6*a*c*g + 3*d^2*g + 3*f^2*g - 3*b*g - 2*e + g, f*(f^2 + 1), f*(d*f + b), f*(b*f - d), -f*(-d^2 + b), d*(d^2 + 1), 2*c^3 + 3*b*c - a, 14*b*c^2 - 16*a*c - 8*d^2 - 14*d*f - 8*f^2 + 27*g^2 - 12*b + 16*z - 16, c*(2*a*c - b + 1)];
+
+I:=ideal<R|B>;
+R1i:= (1 - (a*u1 + b*u1^2 + c*u1^3 + d*v1 + e*v1*u1 + f*v1*u1^2 + g*v1*u1^3))/(1+2w);
+R1:= (1 + a*u1 + b*u1^2 + c*u1^3 + d*v1 + e*v1*u1 + f*v1*u1^2 + g*v1*u1^3)/(1-w);
+R2:= (1 + a*u2 + b*u2^2 + c*u2^3 + d*v2 + e*v2*u2 + f*v2*u2^2 + g*v2*u2^3)/(1-w);
+
+print("YBE:");
+NormalForm(R1*R2*R1-R2*R1*R2,I);
+print("");
+print("R1:");
+NormalForm(R1,I);
+print("");
+print("R1^2:");
+NormalForm(R1^2,I);
+print("");
+print("R1^3:");
+NormalForm(R1^3,I);
+print("");
+print("R1^4:");
+NormalForm(R1^4,I);
+print("");
+print("R1*R1i:");
+NormalForm(R1*R1i,I);
+

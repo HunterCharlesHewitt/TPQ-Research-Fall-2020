@@ -1,0 +1,5 @@
+{a = RootOf(2*_Z^2 - 2*_Z + 1) - 1, b = 0, c = RootOf(2*_Z^2 - 2*_Z + 1), d = d, e = -(6*d*f + 1)*g, f = f, g = g},
+{a = RootOf(2*_Z^2 + 2*_Z + 1) + 1, b = 0, c = RootOf(2*_Z^2 + 2*_Z + 1), d = d, e = -(6*d*f + 1)*g, f = f, g = g}, 
+{a = 0, b = b, c = 0, d = d, e = -6*d*f*g - 6*b*g - g, f = f, g = g}, 
+{a = -1, b = -1, c = 1, d = d, e = -6*g*f*d - g, f = f, g = g}, 
+{a = 1, b = -1, c = -1, d = d, e = -6*g*f*d - g, f = f, g = g}
