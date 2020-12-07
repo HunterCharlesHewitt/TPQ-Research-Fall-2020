@@ -46,7 +46,7 @@ variables = \["u1","v1","u2","v2","u1^2","u2^2","v1^2","v2^2","u1^2","u2^2"\] si
 5. The final output after "COEFFICIENT SEQUENCE" will be what you can use in the MAPLE code
 ### Maple Code
 1. rels are just the copy and pasted sequence of polynomials from the python code output
-2. `R := Matrix(2, 2, [[1 + d - b - f, c - a + e - g], [a - c + e - g, 1 + f - d - b]])` is the matrix representation of  `R:= 1 + a\*u + b\*u^2 + c\*u^3 + d\*v + e\*v\*u + f\*v\*u^2 + g\*v\*u^3` with the original generators
+2. `R := Matrix(2, 2, [[1 + d - b - f, c - a + e - g], [a - c + e - g, 1 + f - d - b]])` is the matrix representation of  `R:= 1 + a*u + b*u^2 + c*u^3 + d*v + e*v*u + f*v*u^2 + g*v*u^3` with the original generators
 3. We next do `det := {Determinant(R)*z - 1}` to enforce the determinant of the solution to be non-zero (which enforces invertibility) 
 4. Next use `with(Groebner); bas := factor(Basis(un, tdeg(z, a, b, c, d, e, f, g)));` and the output will tell us our new relations to put in our magma code for a second run.
 # Results and Leads
@@ -78,4 +78,4 @@ There was some work done with the following description of R1 and R2 in MAGMA
 and similarly for R1. You can view [the MAGMA Code here](). However, through the first run of magma, then maple it is clear that either a or b must be zero for the YBE to be satisfied, which only recovers results from Z2 rather than finding anything interesting. 
 
 ### Yet to try No Z
-Since the z variable is used to enforce invertibility of the solution, and isn't really meaningful outside of that, I began looking into what would happen if I removed z from the relations after running the Groebner basis in Maple. The original result appears to be too much computing power for the free version of MAGMA, but maybe with the full version they could be useful. The code for these is here  
+Since the z variable is used to enforce invertibility of the solution, and isn't really meaningful outside of that, I began looking into what would happen if I removed z from the relations after running the Groebner basis in Maple. The original result appears to be too much computing power for the free version of MAGMA, but maybe with the full version they could be useful. The code for these is [here](https://github.com/HunterCharlesHewitt/TPQ-Research-Fall-2020/tree/main/magma_code/yet_to_run)  
